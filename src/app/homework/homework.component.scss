@@ -1,91 +1,122 @@
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
 .container {
-    width: 400px;
-    height: 350px;
-    margin: 200px auto;
-    .box {
-        width: 550px;
-        background-color:aquamarine;
-        padding: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+}
+.userForm {
+    width: 600px;
+    padding-left: 60px;
+    margin-right: 20px;
+    &__label {
+        font-size: 20px;
     }
-    .bad-words {
-        margin-bottom: 15px;
-        &-header {
-            line-height: 30px;
-            font-size: 20px;
-            font-weight: 700;
-            display: inline-block;
+    &__login,
+    &__password,
+    &__email {
+        width: 500px;
+        height: 35px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        outline: none;
+        border: 3px solid lightgray;
+        &:focus{
+            border: 3px solid rgb(0, 195, 255);
+        } 
+    }
+    &__add-btn {
+        width: 100px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: green;
+        color: white;
+        font-size: 15px;
+        text-align: center;
+        padding: 9px;
+        margin-top: 20px;
+        &:hover {
+            background-color: white;
+            color: green;
+            cursor: pointer;
+            border: 3px solid green;
         }
-        &-main {
-            font-size: 18px;
-            display: inline-block;
-            color:red;
-            margin-left: 10px;
+    }
+    &__edit-btn {
+        width: 100px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: green;
+        color: white;
+        font-size: 15px;
+        text-align: center;
+        padding: 9px;
+        margin-top: 20px;
+        position: relative;
+        bottom: 10px;
+        &:hover {
+            background-color: white;
+            color: green;
+            cursor: pointer;
+            border: 3px solid green;
         }
-        
+    }
+
+}
+.wrong {
+    border-color: red;
+    &:focus {
+        border-color: red;
     }
 }
-
-.addForm {
-    margin-bottom: 15px;
-    .add-button,
-    .reset-button {
-        width: 70px;
-        height: 25px;
+.usersData {
+    width: 100%;
+    margin-top: 28px;
+    border-collapse: collapse;
+    &__tr {
+        height: 65px;
+        border-top: 1px solid black;
+        font-size: 16px;
+    }
+    &__thead tr {
+        height: 44px;
+        border-bottom: 2px solid black;
+        color: black;
+        text-align: left;
+    }
+    th, td {
+        padding: 0 18px 0 12px;
+    }
+    &__btn {
+        height: 40px;
+        padding: 0 15px;
         border-radius: 5px;
         border: none;
         outline: none;
-        margin: 10px;
+        font-size: 16px;
+        &-edit {
+            background-color: yellow;
+            &:hover {
+                background-color: rgb(195, 195, 7);
+                color: black;
+            }
+         
+        }
+        &-delete {
+            background-color: red;
+            color: white;
+            &:hover {
+                background-color: rgb(210, 38, 38);
+            }
+
+        }
     }
-    .add-button {
-        background-color: yellow;
-    }
-    .reset-button {
-        background-color: red;
-        color: white;
-    }
-    .input-text {
-        width: 300px;
-        height: 30px;
-        border: 2px solid gray;
-        padding: 5px;
-        outline: none;
-    }
-    .input-text:focus {
-        border: 2px solid aqua;
-    }
-}
-
-
-
-.input-text-cenzor {
-    width: 470px;
-    height: 100px;
-    margin-bottom: 15px;
-    padding: 5px;
-    resize: none;
-    border: 2px solid gray;
-    outline: none;
-   
-}
-.input-text-cenzor:focus {
-    border: 2px solid aqua;
-}
-
-.cenzor-button {
-    width: 470px;
-    height: 25px;
-    color: white;
-    background-color: rgb(57, 160, 16);
-    border: none;
-    border-radius: 5px;
-}
-
-
-.border{
-    border-color: red;
 }
